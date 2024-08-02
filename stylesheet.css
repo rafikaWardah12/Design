@@ -1,0 +1,38 @@
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+ }
+ .banner .product{
+    /* background-color: red; */
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: 0px;
+    display: flex;
+ }
+
+ .banner .product .soda{
+    background: url(mockup.png), var(--url) var(--left) 0;
+    background-size: auto 100%;
+    width: 280px;
+    /* height: 590px; */
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(mockup.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+ .banner .product:hover{
+    --left: -200px;
+    transform: translateX(-50%) translateY(-80px);
+ }
