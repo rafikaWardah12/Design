@@ -1,14 +1,20 @@
+body{
+   background-image: url(images/bg2.jpg);
+   color: #fff;
+   background-size: 2000px;
+
+}
+
 .banner{
     height: 100vh;
     overflow: hidden;
     position: relative;
  }
  .banner .product{
-    /* background-color: red; */
     width: 500px;
     height: 500px;
     position: absolute;
-    bottom: 170px;
+    bottom: 140px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -20,7 +26,7 @@
  .banner .product .soda{
     background: url(mockup.png), var(--url) var(--left) 0;
     background-size: auto 100%;
-    width: 280px;
+    width: 260px;
     /* height: 590px; */
     aspect-ratio: 2/4;
     background-blend-mode: multiply;
@@ -32,7 +38,122 @@
     transform: translateX(-50%);
  }
 
+ 
+
  .banner .product:hover{
     --left: -200px;
     transform: translateX(-50%) translateY(-80px);
+ }
+
+ .banner .stone{
+   position: absolute;
+   inset: 0 0 0 0;
+   pointer-events: none;
+ }
+
+ .banner .stone img{
+   position: absolute;
+   transition: 0.7s;
+ }
+/*Podium*/
+ /* .banner .stone img:nth-child(1){
+   height: 400px;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: -60px;
+ } */
+
+ /*Tree*/
+ .banner .stone img:nth-child(1){
+   height: 600px;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: -270px;
+   filter: contrast(110%) brightness(90%);
+ }
+
+ .banner:has(.product:hover) .stone img:nth-child(1){
+   transform: translateX(-50%) translateY(50px);
+ }
+
+ .banner .stone img:nth-child(2){
+   height: 100%;
+   left: 0;
+   bottom: -100px;
+   rotate: 30deg;
+   filter: contrast(110%) brightness(70%);
+ }
+ .banner:has(.product:hover) .stone img:nth-child(2){
+   transform: translateX(-100px) translateY(100px);
+ }
+
+ .banner .stone img:nth-child(3){
+   height: 100%;
+   right: 0;
+   bottom: -100px;
+   rotate: -50deg;
+   filter: contrast(110%) brightness(60%);
+ }
+.banner:has(.product:hover) .stone img:nth-child(3){
+   transform: translateX(100px) translateY(100px);
+}
+
+.banner .stone img:nth-child(4){
+   height: 50%;
+   left: 200px;
+   bottom: -100px;
+   rotate: 30deg;
+   filter: contrast(110%);
+ }
+ .banner:has(.product:hover) .stone img:nth-child(4){
+   transform: translateX(-100px) translateY(70px) rotate(-30deg);
+ }
+
+ .banner .stone img:nth-child(5){
+   height: 70%;
+   right: 150px;
+   bottom: -160px;
+   rotate: -40deg;
+   filter: contrast(110%);
+ }
+.banner:has(.product:hover) .stone img:nth-child(5){
+   transform: translateX(100px) translateY(100px) rotate(30deg);
+}
+
+/*Gold*/
+.banner .gold img{
+   position: absolute;
+   transition: 0.5s;
+}
+
+.banner .gold img:nth-child(1){
+   height: 400px;
+   left: 15%;
+   bottom: -150px;
+}
+
+.banner:has(.product:hover) .gold img:nth-child(1) {
+   transform: rotate(30deg) translateX(100px) translateX(-100px);
+}
+
+.banner .gold img{
+   position: absolute;
+   transition: 0.5s;
+}
+
+.banner .gold img:nth-child(2){
+   height: 400px;
+   right: 15%;
+   bottom: -150px;
+}
+
+.banner:has(.product:hover) .gold img:nth-child(2) {
+   transform: rotate(-30deg) translateX(-100px) translateX(100px);
+}
+
+.banner .product .soda:nth-child(2){
+   opacity: 0;
+ }
+ .banner .product:hover .soda:nth-child(2){
+   opacity: 1;
  }
