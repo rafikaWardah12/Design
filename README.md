@@ -16,4 +16,6 @@ This project is a mockup of a website featuring a soda brand with an anime-theme
 2. Open the `index.html` file in your browser to view the mockup.
 
 ## Live Preview
-https://rafikawardah12.github.io/Design/
+```bash
+ https://rafikawardah12.github.io/Design/
+```
